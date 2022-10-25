@@ -12,6 +12,14 @@ const CreatePage = () => {
         ...state,
         [event.target.name]: event.target.value
     })
+    const handleSubmit = event => {
+        event.preventDefault()
+        axios.post(`${process.env.REACT_APP_BACKEND_URL}/create`, state)
+        .then(res => {
+            console.log(res.data)
+            navigate('/read')
+        })
+    }
     return (
         <div>
             <h1>Create Content Page</h1>
@@ -29,3 +37,5 @@ const CreatePage = () => {
         </div>
     )
 }
+
+export default CreatePage

@@ -1,4 +1,4 @@
-const UpdatePage = () => {
+const DetailPage = () => {
     return (
         <div>
 
@@ -6,4 +6,4 @@ const UpdatePage = () => {
     )
 }
 
-export default UpdatePage
+export default DetailPage
