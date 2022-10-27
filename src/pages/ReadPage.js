@@ -16,6 +16,7 @@ const ReadPage = () => {
                     <div key={element._id}>
                     <h2>{element.title}</h2>
                     <p>{element.description}</p>
+                    <Link to={`/read/${element._id}`}>Options</Link>
                     </div>
                 )
             })}
